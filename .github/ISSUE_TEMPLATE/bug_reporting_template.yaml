@@ -27,6 +27,8 @@ body:
         - Major
         - Minor
         - NiceToHave
+    validations:
+      required: true
   - type: textarea
     id: howto_reproduce
     attributes:

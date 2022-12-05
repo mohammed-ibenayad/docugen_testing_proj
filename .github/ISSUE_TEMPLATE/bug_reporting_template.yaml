@@ -1,6 +1,6 @@
 name: Bug Report on DocuGen 
 description: File a bug report
-title: "[Bug]: "
+title: "AVOID generic bug titles, be SPECIFIC please!"
 labels: ["bug", "triage"]
 assignees:
   - mohammed-ibenayad
@@ -8,15 +8,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: bug-title
-    attributes:
-      label: Bug Title
-      description: AVOID generic bug titles, be SPECIFIC please!
-      placeholder: Shopping cart cleared automatically due to invalid product quantity.
-    validations:
-      required: true
+        Thanks for taking the time to fill out this bug report!  
   - type: textarea
     id: bug-description
     attributes:
@@ -38,7 +30,7 @@ body:
   - type: textarea
     id: actual_results
     attributes:
-      label: Actual resulsts
+      label: Actual results
       description: Concise description of the system results after going through the steps.
       placeholder: The system deletes all items in the shopping cart and prompt the user to a screen showing a message that the shopping cart is empty.
       value:
@@ -56,11 +48,14 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: Version
-      description: What version of our software are you running?
+      label: Feature
+      description: What feature of the software you foud the bug?
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - Installation and setup
+        - Generating documents
+        - Working with templates
+        - Working with placeholders
+        - Working with tables
     validations:
       required: true     
   - type: dropdown

@@ -1,29 +1,38 @@
-name: Bug Report
+name: Bug Report on DocuGen 
 description: File a bug report
 title: "[Bug]: "
 labels: ["bug", "triage"]
 assignees:
-  - octocat
+  - mohammed-ibenayad
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
   - type: input
-    id: contact
+    id: bug-title
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Bug Title
+      description: AVOID generic bug titles, be SPECIFIC please!
+      placeholder: Shopping cart cleared automatically due to invalid product quantity.
     validations:
-      required: false
+      required: true
   - type: textarea
-    id: what-happened
+    id: bug-description
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+      placeholder: The system clears all items in the shopping cart while trying to update a product quantity with an invalid number (negative or floating-point number).
+      value:
+    validations:
+      required: true
+  - type: textarea
+    id: howto_reproduce
+    attributes:
+      label: Steps to reproduce the bug
+      description: Steps to reproduce the bug.
+      placeholder: (1) Add more than one product to the shopping cart. - (2) View the shopping cart items. - (3) Update the quantity of one item with a negative or floating-point number. - (4) Click on the update button
+      value:
     validations:
       required: true
   - type: dropdown
@@ -36,6 +45,34 @@ body:
         - 1.0.3 (Edge)
     validations:
       required: true
+   - type: textarea
+    id: actual_results
+    attributes:
+      label: Actual resulsts
+      description: Concise description of the system results after going through the steps.
+      placeholder: The system deletes all items in the shopping cart and prompt the user to a screen showing a message that the shopping cart is empty.
+      value:
+    validations:
+      required: true
+   - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected behavior
+      description: Concise description of what you expected to happen by refering to requirements.
+      placeholder: The system should display an error stating that the product quantity should be an integer.
+      value:
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+    validations:
+      required: true     
   - type: dropdown
     id: browsers
     attributes:
@@ -46,17 +83,3 @@ body:
         - Chrome
         - Safari
         - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true

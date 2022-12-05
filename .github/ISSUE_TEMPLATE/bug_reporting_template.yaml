@@ -1,7 +1,7 @@
 name: Bug Report on DocuGen 
 description: File a bug report
 title: "AVOID generic bug titles, be SPECIFIC please!"
-labels: ["bug", "triage"]
+labels: ["bug"]
 assignees:
   - mohammed-ibenayad
 body:
@@ -18,6 +18,15 @@ body:
       value:
     validations:
       required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - ShowStopper 
+        - Major
+        - Minor
+        - NiceToHave
   - type: textarea
     id: howto_reproduce
     attributes:

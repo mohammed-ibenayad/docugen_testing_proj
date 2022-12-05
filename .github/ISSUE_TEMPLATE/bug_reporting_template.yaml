@@ -37,6 +37,15 @@ body:
     validations:
       required: true
   - type: textarea
+    id: test_data
+    attributes:
+      label: Test Data
+      description: It can be precisely the data you have entered, only what you think is relevant to the bug.
+      placeholder: username=test
+      value:
+    validations:
+      required: false
+  - type: textarea
     id: expected_behavior
     attributes:
       label: Expected behavior

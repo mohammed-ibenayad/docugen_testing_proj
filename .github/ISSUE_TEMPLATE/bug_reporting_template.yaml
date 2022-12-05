@@ -45,7 +45,7 @@ body:
         - 1.0.3 (Edge)
     validations:
       required: true
-   - type: textarea
+  - type: textarea
     id: actual_results
     attributes:
       label: Actual resulsts
@@ -54,7 +54,7 @@ body:
       value:
     validations:
       required: true
-   - type: textarea
+  - type: textarea
     id: expected_behavior
     attributes:
       label: Expected behavior

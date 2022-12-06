@@ -48,12 +48,18 @@ body:
     validations:
       required: true
   - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      placeholder: Drop here a few screenshots to illustrate the actual results.
+    validations:
+      required: false 
+  - type: textarea
     id: test_data
     attributes:
       label: Test Data
       description: It can be precisely the data you have entered, only what you think is relevant to the bug.
-      placeholder: username=test
-      value:
+      placeholder: username=admin
     validations:
       required: false
   - type: textarea
